@@ -112,7 +112,7 @@ class NewTask extends React.Component {
                   <button type="submit" className="btn custom-button mt-3">
                     Create Task
                   </button>
-                  <Link to={`tag/${tag_id}`} className="btn btn-link mt-3">
+                  <Link to={`/tag/${tag_id}`} className="btn btn-link mt-3">
                     Back to {tag_title}
                   </Link>
                 </form>
