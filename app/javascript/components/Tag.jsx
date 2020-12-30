@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import CompletedTaskButton from "./buttons/CompletedTaskButton"
+import IncompleteTaskButton from "./buttons/IncompleteTaskButton"
 
 class Tag extends React.Component {
   constructor(props) {
@@ -77,7 +79,16 @@ class Tag extends React.Component {
       taskList = tasks
         .map((task, index) => (
           <li key={index} className="list-group-item">
-            {task.description}
+            <div className="card mb-4">
+              <div className="card-body">
+                <h5 className="card-title">{task.description}</h5>
+                {task.completed ? <CompletedTaskButton id={task.id} tag_id={tag.id}/> 
+                : <IncompleteTaskButton id={task.id} tag_id={tag.id}/>}
+                <Link to={`/tag/${tag.id}/task/${task.id}`} className="btn custom-button">
+                  View task
+                </Link>
+              </div>
+            </div>
           </li>
           // completebutton, delete button
         ));

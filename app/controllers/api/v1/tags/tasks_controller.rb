@@ -23,7 +23,7 @@ class Api::V1::Tags::TasksController < ApplicationController
 
   def destroy
     task&.destroy
-    render json: { message: 'Tag deleted!' }
+    render json: { message: 'Task deleted!' }
   end
 
   def markCompleted

@@ -5,6 +5,7 @@ import Tags from "../components/Tags"
 import Tag from "../components/Tag"
 import NewTag from "../components/NewTag"
 import NewTask from "../components/NewTask"
+import Task from "../components/Task"
 
 export default (
   <Router>
@@ -14,6 +15,7 @@ export default (
       <Route path="/tag/:id" exact component={Tag} />
       <Route path="/new_tag" exact component={NewTag} />
       <Route path="/new_task/:tag_id" exact component={NewTask} />
+      <Route path="/tag/:tag_id/task/:id" exact component={Task} />
     </Switch>
   </Router>
 );
