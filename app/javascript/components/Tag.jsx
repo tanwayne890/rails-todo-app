@@ -78,7 +78,7 @@ class Tag extends React.Component {
     if (tasks.length > 0) {
       taskList = tasks.map((task, index) => (
         <li key={index} className="list-group-item">
-          <div className="d-flex">
+          <div className="d-flex justify-content-between align-items-center">
             <div className="p-2">
               <h5>{task.description}</h5>
             </div>
@@ -110,37 +110,38 @@ class Tag extends React.Component {
           </div>
         </section>
 
-        <div className="container py-5">
-          <div className="row justify-content-md-center">
-            <div className="col col-lg-2"></div>
-            <div className="col-md-10">
-              <div className="column">
-                <div className="mb-2">
-                  <h5>Task list</h5>
-                  <Link to={`/new_task/${tag.id}`} className="btn btn-link">
-                    Create new task
-                  </Link>
-                </div>
+        <div className="container py-3 px-5">
+          <div className="column">
+            <div className="d-flex w-100 justify-content-between">
+              <u>
+                <h5 className="">Task list</h5>
+              </u>
 
-                <div className="col-sm-12 col-lg-10">
-                  <ul className="list-group">{taskList}</ul>
-                </div>
-
-                <div className="col-sm-12 col-lg-10">
-                  <button
-                    type="button"
-                    className="btn btn-danger"
-                    onClick={this.deleteTag}
-                  >
-                    Delete Tag
-                  </button>
-                </div>
-              </div>
-              <Link to="/tags" className="btn btn-link">
-                Back to tags
+              <Link
+                to={`/new_task/${tag.id}`}
+                className="btn btn-link float-right"
+              >
+                Create new task
               </Link>
             </div>
-            <div className="col col-lg-2"></div>
+
+            <div className="">
+              <ol className="pl-0">{taskList}</ol>
+            </div>
+
+            <div className="">
+              <Link to="/tags" className="btn btn-link float-left">
+                Back to tags
+              </Link>
+
+              <button
+                type="button"
+                className="btn btn-danger float-right"
+                onClick={this.deleteTag}
+              >
+                Delete Tag
+              </button>
+            </div>
           </div>
         </div>
       </div>
