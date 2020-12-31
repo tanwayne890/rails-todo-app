@@ -67,19 +67,23 @@ class Task extends React.Component {
           </div>
         </section>
 
-        <div className="container py-5">
-          <div className="col-sm-12 col-lg-2">
+        <div className="container py-3 px-5">
+          <div className="">
             <button
               type="button"
-              className="btn btn-danger"
+              className="btn btn-danger float-right"
               onClick={this.deleteTask}
             >
               Delete Task
             </button>
+
+            <Link
+              to={`/tag/${task.tag_id}`}
+              className="btn btn-primary float-left"
+            >
+              Back to tag
+            </Link>
           </div>
-          <Link to={`/tag/${task.tag_id}`} className="btn btn-link">
-            Back to tag
-          </Link>
         </div>
       </div>
     );

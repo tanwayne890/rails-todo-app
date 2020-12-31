@@ -79,10 +79,10 @@ class Tag extends React.Component {
       taskList = tasks.map((task, index) => (
         <li key={index} className="list-group-item">
           <div className="d-flex justify-content-between align-items-center">
-            <div className="p-2">
+            <div className="pt-1">
               <h5>{task.description}</h5>
             </div>
-            <div className="p-2">
+            <div>
               {task.completed ? (
                 <CompletedTaskButton id={task.id} tag_id={tag.id} />
               ) : (
@@ -114,7 +114,7 @@ class Tag extends React.Component {
           <div className="column">
             <div className="d-flex w-100 justify-content-between">
               <u>
-                <h5 className="">Task list</h5>
+                <h5 className="pt-1">Task list</h5>
               </u>
 
               <Link
@@ -125,12 +125,12 @@ class Tag extends React.Component {
               </Link>
             </div>
 
-            <div className="">
+            <div>
               <ol className="pl-0">{taskList}</ol>
             </div>
 
-            <div className="">
-              <Link to="/tags" className="btn btn-link float-left">
+            <div>
+              <Link to="/tags" className="btn btn-primary float-left">
                 Back to tags
               </Link>
 
