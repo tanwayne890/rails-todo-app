@@ -1,8 +1,8 @@
 # README
 
-Name: Wayne Tan Kin Lun
-Matriculation number: A0200801A
-App deployed link: https://react-rails-todoapp.herokuapp.com/
+Name: Wayne Tan Kin Lun <br>
+Matriculation Number: A0200801A <br>
+App Website: https://react-rails-todoapp.herokuapp.com/ <br>
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
